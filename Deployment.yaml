@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+    app.kubernetes.io/instance: hello-world
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: hello-world
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: registry.navercorp.com/wooseop/hello-world
+        ports:
+        - containerPort: 80
