@@ -12,8 +12,8 @@ deploy-image:
 
 .PHONY: delete-k8s
 delete-k8s:
-	kubectl delete deploy ${K8S_TAG}
-	kubectl delete svc ${K8S_TAG}
+	kubectl delete deploy ${K8S_TAG} || true
+	kubectl delete svc ${K8S_TAG} || true
 
 .PHONY: apply-k8s
 apply-k8s:
