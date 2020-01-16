@@ -2,7 +2,7 @@ FROM golang
 
 WORKDIR /var/app
 
-COPY go.* .
+COPY go.* ./
 RUN go mod download
 
 COPY . .
