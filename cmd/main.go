@@ -21,7 +21,7 @@ func main() {
 		if who, ok := r.URL.Query()["who"]; ok && who[0] != "" {
 			you = who[0]
 		}
-		fmt.Fprintf(w, "[%v] Hello, %s!", id, you)
+		fmt.Fprintf(w, "[%v] Hello, %s!\n", id, you)
 	})
 	http.ListenAndServe(":"+port, nil)
 }
