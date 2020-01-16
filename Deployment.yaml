@@ -19,3 +19,5 @@ spec:
         image: registry.navercorp.com/wooseop/hello-world
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: secret
